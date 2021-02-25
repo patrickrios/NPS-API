@@ -1,7 +1,6 @@
-
-import {Request, Response}  from 'express'
-import { getRepository } from 'typeorm'
-import { User } from '../models/User'
+import { Request, Response } from 'express'
+import { getCustomRepository } from 'typeorm'
+import { UsersRepository } from '../repositories/UsersRepository'
 
 class UserController{
 
@@ -9,12 +8,12 @@ class UserController{
 
         /** Desestrutura os dados da vindos na 
          *  requisição. */
-        const {name,email} = request.body 
+        const {name, email} = request.body 
 
 
         /** Guarda todos os registros de usuário 
          *  em um único repositorio */
-        const usersRepository = getRepository(User)
+        const usersRepository = getCustomRepository( UsersRepository )
 
 
         /** Procura por algum usuário que já cadastrado 
@@ -43,8 +42,8 @@ class UserController{
 
         /** Retorna todas informações do usuário caso 
          *  seja salvo com sucesso */
-        return response.json(  user )
+        return response.status(201).json(  user )
     }
 }
 
-export {UserController}
+export { UserController }

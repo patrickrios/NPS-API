@@ -1,15 +1,4 @@
-import 'reflect-metadata'
-import express, { request, response } from 'express'
-import './database/'
-import { router } from './router'
-
-const app = express()
-
-// Recebe o body da requisição em formato JSON
-app.use(express.json())
-
-// Define as rotas definidas no arquivo router
-app.use(  router )
+import { app } from "./app";
 
 // Roda o servidor ao executar 'yarn dev'
 app.listen(3333, ()=> console.log('server is running...'))

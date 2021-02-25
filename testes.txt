@@ -1,0 +1,10 @@
+Testes automatizados
+
+1 - Testes unitários
+
+2 - Testes de integração
+
+ -> Request -> routes -> controller -> repository
+ <- repository <- controller <- response
+
+ Ponto a ponto (E2E)
