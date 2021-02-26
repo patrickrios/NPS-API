@@ -1,7 +1,7 @@
 import { app } from "./app";
 
 // Roda o servidor ao executar 'yarn dev'
-app.listen(3000, ()=> console.log('server is running...'))
+app.listen(3333, ()=> console.log('server is running...'))
 
 
 
