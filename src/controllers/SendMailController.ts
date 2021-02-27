@@ -1,6 +1,7 @@
 import {Response, Request} from 'express'
 import {resolve} from 'path'
 import { getCustomRepository } from 'typeorm';
+import { AppErrors } from '../errors/AppErrors';
 import { SurveyRepository } from '../repositories/SurveysRepository';
 import { SurveysUsersRepository } from '../repositories/SurveysUsersRepository';
 import { UsersRepository } from '../repositories/UsersRepository';
@@ -19,16 +20,12 @@ class SendMailConroller{
         //Verifica se emai fornecido existe
         const user =  await usersRepository.findOne( {email} )
         if( !user ){
-            return response.status(400).json({
-                error: "User does not exists "
-            })
+            throw new AppErrors("User does not exists")
         }
 
         const survey = await surveysRepository.findOne( {id: survey_id})
         if( !survey ){
-            return response.status(400).json({
-                error: "Survey doesnot exists"
-            })
+            throw new AppErrors("Survey doesnot exists")
         }
 
         const npsPath = resolve(__dirname, "..", "views", "emails", "npsMails.hbs")
