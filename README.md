@@ -73,7 +73,7 @@ NPS é uma API para criar **pesquisas** de satisfação do consumidor. Com ela �
 ```
 ```bash
     # Iniciando a aplicação
-    $ yarn start
+    $ yarn dev
 ```
 
 
