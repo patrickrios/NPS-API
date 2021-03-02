@@ -1,6 +1,6 @@
 <img src="https://ik.imagekit.io/lrjseyuxi3m/Nps-cover_R5R5pg5y5.png" align="center">
 
----
+
 ## Índice
 - [Sobre](#-sobre)
 - [Tecnologias](#-tecnologias)
@@ -8,17 +8,18 @@
 - [Baixar e instalar](#-baixar-e-instalar-o-projeto)
 - [Agradecimentos](#-agradecimentos)
 
----
+
 ## 📝 Sobre
 NPS é uma API para criar **pesquisas** de satisfação do consumidor. Com ela é possível **enviar pesquisas** por e-mail para **usuários cadastrados** e salvar sua **resposta**.
 
----
+
 ## 🚀 Tecnologias
 * NodeJS
 * Typescript
 * TypeORM
 * Jest
----
+
+
 ## Funcionalidades
 * Cadastrar novo usuário
   ```json
@@ -56,9 +57,7 @@ NPS é uma API para criar **pesquisas** de satisfação do consumidor. Com ela �
     Route: /sendMail
   ```
 
-[Ir para o Início ⬆](#-índice)
 
----
 ## 📦 Baixar e instalar o projeto
 ```bash
     # Copiando o projeto
@@ -77,9 +76,7 @@ NPS é uma API para criar **pesquisas** de satisfação do consumidor. Com ela �
     $ yarn start
 ```
 
-[Ir para o Início ⬆](#-índice)
 
----
 ## Agradecimentos
 Este projeto foi desenvolvido durante a semana NLW4 promovido pela [Rocketseat](https://rocketseat.com.br/).
 
